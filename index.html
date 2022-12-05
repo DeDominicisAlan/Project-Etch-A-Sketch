@@ -8,15 +8,21 @@
     <title>Etch-A-Sketch</title>
 </head>
 <body>
-    <div>
-        <div class="botones">
-            <button>Boton 1</button>
-            <button>Boton 2</button>
-            <button>Boton 3</button>
-        </div>
+    <div class="botones">
+        <button class="boton" id="boton1">5x5</button>
+        <button class="boton" id="boton2">10x10</button>
+        <button class="boton" id="boton3">30x30</button>
+        <form action="">
+            <input type="color" class="boton">
+            <input type="range" id="barra" value="10" max="30" min="5">
+        </form>
+        
+    </div>
+    <div class="contenedor">
         <div class="contenedor-grid">
-
         </div>
     </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
