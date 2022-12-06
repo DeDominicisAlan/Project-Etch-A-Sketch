@@ -26,8 +26,7 @@ limpiar.onclick = () => {
     ajustarTamaño(lastSize);
 };
 
-borrar.addEventListener('click', ()  => {color = 'white';
-console.log('hola')});
+borrar.addEventListener('click', ()  => {color = 'white'});
 
 //Ajuste de Tamaño
 
