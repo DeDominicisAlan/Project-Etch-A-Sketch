@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
@@ -8,21 +8,21 @@
     <title>Etch-A-Sketch</title>
 </head>
 <body>
-    <div class="botones">
-        <button class="boton" id="boton1">5x5</button>
-        <button class="boton" id="boton2">10x10</button>
-        <button class="boton" id="boton3">30x30</button>
-        <form action="">
-            <input type="color" class="boton">
-            <input type="range" id="barra" value="10" max="30" min="5">
-        </form>
-        
-    </div>
-    <div class="contenedor">
-        <div class="contenedor-grid">
+    <div class="main">
+        <div class="botones">
+            <button class="boton" id="botonLimpiar">Limpiar Tablero</button>
+            <button class="boton" id="botonBorrar">Borrar</button>
+            <input type="color" class="boton" id="botonColor">
+            <div class="colores"> 
+                <p id="tamaño">hola</p>
+                <input type="range" id="barra" value="10" max="30" min="4">
+            </div>
+        </div>
+        <div class="contenedor">
+            <div class="contenedor-grid">
+            </div>
         </div>
     </div>
-
     <script src="main.js"></script>
 </body>
 </html>
