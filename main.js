@@ -1,25 +1,33 @@
 //Definición de objetos
 
+const borrar = document.querySelector('#botonBorrar');
 const limpiar = document.querySelector('#botonLimpiar');
 const p = document.querySelector('#tamaño');
 const grid = document.querySelector('.contenedor-grid');
 const barra = document.querySelector('#barra')
-const color = document.querySelector('#botonColor');
+const colorPicker = document.querySelector('#botonColor');
+
 var lastSize = 8;
+
+var color = 'black';
 
 //Comportamientos
 //Iniciar la pagina con 8x8 divs
+
 ajustarTamaño(lastSize);
 
+colorPicker.addEventListener('input', e => {
+    color = e.target.value;
+})
+
 barra.onchange = (e) => ajustarTamaño(e);
+
 limpiar.onclick = () => {
     ajustarTamaño(lastSize);
 };
 
-document.querySelector('grid-element').onclick = () => {
-    div.backgroundColor = 'red';
-    console.log('rojo');
-};
+borrar.addEventListener('click', ()  => {color = 'white';
+console.log('hola')});
 
 //Ajuste de Tamaño
 
@@ -40,7 +48,7 @@ function tamañoNuevo(n){
         div.classList.add('grid-element');
         grid.appendChild(div);
         div.onclick = () => {
-            div.style.backgroundColor = 'red';
+            div.style.backgroundColor = color;
         }
     }
 };
@@ -50,3 +58,6 @@ function tamañoNuevo(n){
 function cleanGrid(){
     grid.innerHTML = '';
 }
+
+//Boton de borrar
+
